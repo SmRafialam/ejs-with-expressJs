@@ -1,0 +1,22 @@
+<%- include("layout/header") %>
+
+    <main>
+        <form action="/" method="post">
+            <input type="text" placeholder="Programming language" name="planguge">
+            <button type="submit">Add</button>
+        </form>
+        <ul>
+            <!-- <li>C Programming</li> -->
+            <% if(plNames.length > 0){ %>
+
+                <% for(i=0;i<plNames.length;i++){ %>
+                    <li><%= plNames[i] %></li>
+                    <%   } %> 
+
+            <% }else{ %>
+                <p>No data found.</p>
+            <% } %>
+        </ul>
+    </main>
+
+<%- include("layout/footer") %>    
